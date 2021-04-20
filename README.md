@@ -23,6 +23,26 @@ archivePrefix = {arXiv},
 It is actually possible to change the settings in your ADS account to generate more useful keys. To do so, go to https://ui.adsabs.harvard.edu/user/settings/application and update your "BibTeX Default Export Key Format". If this is changed to "%1H_%Y_%q" the generated keys will now be in the format of "Lastname_year_joural", e.g.:  
 @ARTICLE{Kirsten_2020_NatAs,
 
+While this is already a huge step forward it can cause some issues. First, it is now possible that multiple entries have the same key. This happens for example with:  
+@ARTICLE{Chime/FrbCollaboration_2020_Natur,
+       author = {{Chime/Frb Collaboration} and {Amiri}, M. and {Andersen}, B.~C. and {Bandura}, K.~M. and {Bhardwaj}, M. ...},
+        title = "{Periodic activity from a fast radio burst source}",
+      journal = {Nature},
+         year = 2020,
+        month = jun,
+       volume = {582},
+        pages = {351-355},
+}
 
+and  
 
+@ARTICLE{CHIME/FRBCollaboration_2020_Natur,
+       author = {{CHIME/FRB Collaboration} and {Andersen}, B.~C. and {Bandura}, K.~M. and {Bhardwaj}, M. and ...},
+        title = "{A bright millisecond-duration radio burst from a Galactic magnetar}",
+      journal = {Nature},
+         year = 2020,
+        month = nov,
+       volume = {587},
+        pages = {54-58},
+}
 
