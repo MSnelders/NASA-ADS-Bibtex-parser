@@ -3,21 +3,23 @@ A simple python script that will change the (not-as-useful) bib-keys generated b
 
 Do you use the NASA ADS (Astrophysics Data System) for your papers but are you frustrated that the default keys are not exactly useful? Look no further. With some instructions in your ADS account and this script you can turn all those keys into something more useful. 
 
-As an example, the default settings of the ADS service generates the following bibtex-entry for this article (with the key in bold, https://ui.adsabs.harvard.edu/abs/2020NatAs.tmp..232K/abstract):
-@ARTICLE{2020NatAs.tmp..232K,
-       author = {{Kirsten}, F. and {Snelders}, M.~P. and {Jenkins}, M. and {Nimmo}, K. and {van den Eijnden}, J. and {Hessels}, J.~W.~T. and {Gawro{\'n}ski}, M.~P. and {Yang}, J.},
-        title = "{Detection of two bright radio bursts from magnetar SGR 1935 + 2154}",
-      journal = {Nature Astronomy},
-     keywords = {Astrophysics - High Energy Astrophysical Phenomena},
-         year = 2020,
-        month = nov,
-          doi = {10.1038/s41550-020-01246-3},
-archivePrefix = {arXiv},
-       eprint = {2007.05101},
- primaryClass = {astro-ph.HE},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2020NatAs.tmp..232K},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
+As an example, the default settings of the ADS service generates the following bibtex-entry for this article (with the **key in bold**, https://ui.adsabs.harvard.edu/abs/2020NatAs.tmp..232K/abstract):  
+@ARTICLE{**2020NatAs.tmp..232K**,
+       author = {{Kirsten}, F. and {Snelders}, M.~P. and {Jenkins}, M. and {Nimmo}, K. and {van den Eijnden}, J. and {Hessels}, J.~W.~T. and {Gawro{\'n}ski}, M.~P. and {Yang}, J.},  
+        title = "{Detection of two bright radio bursts from magnetar SGR 1935 + 2154}",  
+      journal = {Nature Astronomy},  
+     keywords = {Astrophysics - High Energy Astrophysical Phenomena},  
+         year = 2020,  
+        month = nov,  
+          doi = {10.1038/s41550-020-01246-3},  
+archivePrefix = {arXiv},  
+       eprint = {2007.05101},  
+ primaryClass = {astro-ph.HE},  
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2020NatAs.tmp..232K},  
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}  
+}  
+
+
 
 
 
