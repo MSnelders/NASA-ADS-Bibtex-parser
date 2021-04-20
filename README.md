@@ -50,8 +50,9 @@ and
 
 
 What this script does is the following:
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+1. Puts everything into lowercase, Kirsten_2020_NatAs -> kirsten_2020_natas
+1. Removes all special characters (except underscores), @ARTICLE{in'tZand_2015_arXix -> @ARTICLE{intzand_2015_arxix 
+1. Any paper written by the CHIME/FRBCollaboration gets replaced with chime, CHIME/FRBCollaboration_2020_Natur -> chime_2020_natur
+1. In case there are conflincting (duplicate) keys
+   1. First adds the volume to the key (if it exists), CHIME/FRBCollaboration_2020_Natur -> chime_2020_natur_587
+   1. If there is still a conflict (e.g. https://ui.adsabs.harvard.edu/abs/2017ApJ...844..162T/abstract and https://ui.adsabs.harvard.edu/abs/2017ApJ...844...65T/abstract), also adds the pagenumer to the key, Thompson_2017_ApJ -> thompson_2017_apj_844_65
