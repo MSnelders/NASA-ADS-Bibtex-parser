@@ -61,3 +61,4 @@ What this script does is the following:
 1. In case there are conflincting (duplicate) keys
    1. First adds the volume to the key (if it exists), CHIME/FRBCollaboration_2020_Natur -> chime_2020_natur_587
    1. If there is still a conflict (e.g. https://ui.adsabs.harvard.edu/abs/2017ApJ...844..162T/abstract and https://ui.adsabs.harvard.edu/abs/2017ApJ...844...65T/abstract), also adds the pagenumer to the key, Thompson_2017_ApJ -> thompson_2017_apj_844_65
+   1. If there is still a conflict, it will print the conflicting entries and quit the program. It is likely that you have some duplicate entries in the <infile.bib>.
