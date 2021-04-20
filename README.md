@@ -24,6 +24,7 @@ It is actually possible to change the settings in your ADS account to generate m
 @ARTICLE{Kirsten_2020_NatAs,
 
 While this is already a huge step forward it can cause some issues. First, it is now possible that multiple entries have the same key. This happens for example with:  
+  
 @ARTICLE{Chime/FrbCollaboration_2020_Natur,  
        author = {{Chime/Frb Collaboration} and {Amiri}, M. and {Andersen}, B.~C. and {Bandura}, K.~M. and {Bhardwaj}, M. ...},  
         title = "{Periodic activity from a fast radio burst source}",  
