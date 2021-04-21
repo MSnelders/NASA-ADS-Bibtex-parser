@@ -4,6 +4,9 @@ A simple python script that will change the (not-as-useful) bib-keys generated b
 # Useage:  
 Go to the settings of your ADS account and place "%1H_%Y_%q" under "BibTeX Default Export Key Format". Next, export your ADS library. Finally, use 'python bibparser.py -i <infile.bib> -o <outfile.bib>'
 
+# Requirements:
+Python (It has been tested with >=3.6 but it should also work for Python 2) and Pandas (https://pandas.pydata.org/docs/index.html#)
+
 # Explanation:
 
 Do you use the NASA ADS (Astrophysics Data System) for your papers but are you frustrated that the default keys are not exactly useful? Look no further. With some instructions in your ADS account and this script you can turn all those keys into something more useful. 
