@@ -68,7 +68,7 @@ def extend_key_with_vol(key, entry):
     if not (vol == ""):
         return "{}_{}".format(key, vol)
     else:
-        return ""
+        return key
 
 def extend_key_with_pagenum(key, entry):
     """ If it exists, append the pagenumber to the current key, else return
@@ -84,7 +84,7 @@ def extend_key_with_pagenum(key, entry):
     if not (pagenum == ""):
         return "{}_{}".format(key, pagenum)
     else:
-        return ""
+        return key
 
 def create_bib_entries(file_name):
     """ From a input filename, read the input bib file into a string, extract
