@@ -3,6 +3,7 @@ import os
 import re
 import pandas as pd
 import sys
+pd.set_option("display.max_colwidth", 5000)
 
 def options():
     parser = argparse.ArgumentParser(description="A Python script that will take one or multiple bibtex files as exported by the NASA ADS service and will replace their bib-code with something more usefull.")
@@ -101,6 +102,24 @@ def create_bib_entries(file_name):
 
     return keys, entries
 
+
+def fix_exceptions(df):
+    """ Given a pandas dataframe with the columns 'keys' and 'entries', make a
+    custom key if a specified 'doi' is in the entry."""
+
+    # list of exceptions in [(doi1, custom_key1),
+    #                        (doi2, custom_key2)]
+    excepts = [("10.1093/mnras/stab3051", "james_2021_mnras_zdmdistribution"),\
+               ("10.1093/mnrasl/slab117", "james_2021_mnras_frbstarformation")]
+
+    for index, row in df.iterrows():
+        for e in excepts:
+            if e[0] in row["entries"]:
+                df.loc[index, "keys"] = e[-1]
+
+    return df
+
+
 def create_df(keys, entries):
     """ Given a list of keys and entries, create a pandas dataframe. Next,
         To avoid duplicates add volume numbers to conflicting keys. If there are
@@ -109,6 +128,8 @@ def create_df(keys, entries):
 
     df = pd.DataFrame(data={"keys":keys,\
                        "entries":entries})
+
+    df = fix_exceptions(df)
     df = df.sort_values(by=["keys"])
 
     # for the conflicting keys, add a new column with the keys + volume number
