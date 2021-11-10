@@ -3,7 +3,6 @@ import os
 import re
 import pandas as pd
 import sys
-pd.set_option("display.max_colwidth", 5000)
 
 def options():
     parser = argparse.ArgumentParser(description="A Python script that will take one or multiple bibtex files as exported by the NASA ADS service and will replace their bib-code with something more usefull.")
@@ -110,7 +109,11 @@ def fix_exceptions(df):
     # list of exceptions in [(doi1, custom_key1),
     #                        (doi2, custom_key2)]
     excepts = [("10.1093/mnras/stab3051", "james_2021_mnras_zdmdistribution"),\
-               ("10.1093/mnrasl/slab117", "james_2021_mnras_frbstarformation")]
+               ("10.1093/mnrasl/slab117", "james_2021_mnras_frbstarformation"),\
+               ("10.1038/s41586-018-0867-7", "chime_2019_natur_lowfreqobs"),\
+               ("10.1038/s41586-018-0864-x", "chime_2019_natur_secondrepeatfrb"),\
+               ("10.1038/s41586-020-2398-2", "chime_2020_natur_periodicactivity"),\
+               ("10.1038/s41586-020-2863-y", "chime_2020_natur_galacticfrb")]
 
     for index, row in df.iterrows():
         for e in excepts:
